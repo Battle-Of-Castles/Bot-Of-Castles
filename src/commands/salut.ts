@@ -2,8 +2,8 @@ import { botCache, cache, sendMessage } from "../../deps.ts";
 import { createCommand } from "../utils/helpers.ts";
 
 createCommand({
-    name: `ping`,
-    description: "commands/ping:DESCRIPTION",
+    name: `salut`,
+    description: "salut",
     botChannelPermissions: ["SEND_MESSAGES"],
     execute: function (message) {
       sendMessage(
