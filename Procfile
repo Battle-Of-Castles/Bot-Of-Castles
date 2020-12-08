@@ -1,0 +1,1 @@
+service: deno run --allow-net --allow-read --allow-write --quiet --no-check mod.ts
