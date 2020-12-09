@@ -10,7 +10,7 @@ import { registerTasks } from "./../utils/taskHelper.ts";
 botCache.eventHandlers.ready = function () {
   editBotsStatus(
     StatusTypes.DoNotDisturb,
-    "Battle of Clash Bot !",
+    "Battle Of Castles",
     ActivityType.Game
   );
 
