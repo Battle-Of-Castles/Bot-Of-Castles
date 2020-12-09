@@ -1,3 +1,3 @@
 {
-	"DESCRIPTION": "Checks whether the bot is responsive."
+	"DESCRIPTION": "Vérifie si le bot répond et affiche sa latence.\n **Utilisation : `b!ping`**"
 }
