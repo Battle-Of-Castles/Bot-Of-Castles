@@ -1,7 +1,7 @@
 import { botCache, sendMessage } from "../../deps.ts";
 import { translate } from "../utils/i18next.ts";
 import { Embed } from "../utils/Embed.ts";
-import { createCommand } from "../utils/helpers.ts";
+import { createCommand, sendResponse } from "../utils/helpers.ts";
 import { configs } from "../../configs.ts";
 
 createCommand({
@@ -24,13 +24,13 @@ createCommand({
         .addField(`${configs.prefix}salut`, `Répond un gentil message`)
         .addField(`${configs.prefix}stats`, `Affiche les statistiques du bot`)
         .setFooter(`Bot créé par Ben'#6226 | En cas de problème, merci d'envoyer un message sur le discord officiel de BoC.`, 'https://cdn.discordapp.com/avatars/340308017297883138/a4e32aa07dbe905e5f99230680d33c4e.png?size=128');
-      return sendMessage(message.channelID, { embed });
+      return sendResponse(message, { embed });
     }
 
     const command = botCache.commands.get(args.command);
     if (!command) {
-      return sendMessage(
-        message.channelID,
+      return sendResponse(
+        message,
         `Command ${args.command} not found.`,
       );
     }
@@ -52,8 +52,8 @@ createCommand({
         description === "DESCRIPTION" ? command.description : description,
       );
 
-    return sendMessage(
-      message.channelID,
+    return sendResponse(
+      message,
       { embed },
     );
   },
