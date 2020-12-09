@@ -8,7 +8,7 @@ createCommand({
     execute: function (message) {
       sendMessage(
         message.channelID,
-        `Salut`
+        `Salut bg`
       );
     },
   });
