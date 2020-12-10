@@ -19,7 +19,7 @@ createCommand({
         const memberID = message.mentions[0] || message.author.id;
         const member = guild?.members.get(memberID);
         const iconURL = 'https://cdn.discordapp.com/attachments/740957978152140901/785707502654324766/a7cb1ea4de4f89cb6f3e5492fc67e14d.png'
-
+        
         if (!args.type) {
             const embed = new Embed()
                 .setColor("random")
