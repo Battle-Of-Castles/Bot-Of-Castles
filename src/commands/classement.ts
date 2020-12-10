@@ -10,10 +10,12 @@ createCommand({
             name: "type",
             type: "string",
             required: false
-        }
+        },
+        
+        
     ],
     botChannelPermissions: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
-    execute: async (message, args, guild) => {
+    execute: async (message, args: ClassArgs, guild) => {
         const url = `https://www.battleofcastles.com/api/ranking`
         const result = await fetch(url).then((res) => res.json());
         const memberID = message.mentions[0] || message.author.id;
