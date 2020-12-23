@@ -29,7 +29,7 @@ createCommand({
                 .setTitle('Voici le top 3 dans les 3 catégories')
                 .addField("1 vs 1 : ", '🥇 ' + result[1].data[0].pseudo + " **" + result[1].data[0].points1 +"** pts " + '🥈 ' + result[1].data[1].pseudo + " **" + result[1].data[1].points1 +"** pts " + "🥉 " + result[1].data[2].pseudo + " **" + result[1].data[2].points1 + "** pts " )
                 .addField("2 vs 2 : ", '🥇 ' + result[2].data[0].pseudo + " **" + result[2].data[0].points2 +"** pts " + '🥈 ' + result[2].data[1].pseudo + " **" + result[2].data[1].points2 +"** pts " + "🥉 " + result[2].data[2].pseudo + " **" + result[2].data[2].points2 + "** pts " )
-                .addField("3 vs 3 : ", '🥇 ' + result[3].data[0].pseudo + " **" + result[3].data[0].points3 +"** pts " + '🥈 ' + result[3].data[1].pseudo + " **" + result[3].data[1].points3 +"** pts " + "🥉 " + result[3].data[2].pseudo + " **" + result[3].data[2].points3 + "** pts " )
+                .addField("3 vs 3 : ", '🥇 ' + result[3]['data'][0]['pseudo'] + " **" + result[3].data[0].points3 +"** pts " + '🥈 ' + result[3].data[1].pseudo + " **" + result[3].data[1].points3 +"** pts " + "🥉 " + result[3].data[2].pseudo + " **" + result[3].data[2].points3 + "** pts " )
                 .setFooter(`Classement créé avec : ${url}`)
                 .setTimestamp();
             return sendMessage(message.channelID, { embed });
