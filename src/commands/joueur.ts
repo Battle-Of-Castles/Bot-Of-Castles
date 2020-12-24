@@ -21,10 +21,32 @@ createCommand({
         var player = args.joueur;
         const iconURL = 'https://cdn.discordapp.com/attachments/740957978152140901/785707502654324766/a7cb1ea4de4f89cb6f3e5492fc67e14d.png'
         const embed = new Embed()
-            .setTitle(player, iconURL)
+            .setAuthor("Informations d'un joueur", iconURL)
+            .setTitle(player)
             .setColor('random')
 
-        const modes = [1, 2, 3]
+            var classement = 'N/A'
+            var points = 'N/A'
+
+            const found = result['solo']['data'].find(e => e.pseudo === player)
+            if (found) {
+                classement = found['ranking']
+                points = found['points']
+            }
+
+            embed.addField('Classement', `${classement}`)
+            embed.addField('Points', `${points}`)
+        
+
+        return sendMessage(message.channelID, { embed })
+    }
+})
+
+interface JoueurArgs {
+    joueur: string;
+}
+
+        /*const modes = [1, 2, 3]
 
         modes.forEach((type) => {
             const elem = result[type]
@@ -41,12 +63,4 @@ createCommand({
             }
             
             embed.addField(`${type}v${type}`, `Classement : **${classement}**\n Points : **${points}**`)
-        })
-        return sendMessage(message.channelID, { embed })
-
-    }
-})
-
-interface JoueurArgs {
-    joueur: string;
-}
+        })*/
