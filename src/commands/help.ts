@@ -20,9 +20,11 @@ createCommand({
         .setAuthor('Liste des commandes disponibles', `https://cdn.discordapp.com/attachments/740957978152140901/785707600917823528/unknown.png`)
         .addField(`${configs.prefix}ping`, `Envoie un ping au serveur et donne sa latence`)
         .addField(`${configs.prefix}help <commande>`, `Affiche l'aide`)
-        .addField(`${configs.prefix}classement <1v1 | 2v2 | 3v3>`, `Affiche le classement compétitif de BoC en fonction de la catégorie`)
+        .addField(`${configs.prefix}classement`, `Affiche le classement compétitif de BoC`)
         .addField(`${configs.prefix}salut`, `Répond un gentil message`)
         .addField(`${configs.prefix}stats`, `Affiche les statistiques du bot`)
+        .addField(`${configs.prefix}joueur <Pseudo BoC>`, `Affiche les informations d'un joueur donné`)
+        .addField(`${configs.prefix}profile`, `Permet à l'auteur du message d'afficher ses informations BoC si il a lié son compte Discord sur le site de BoC`)
         .setFooter(`Bot créé par Ben'#6226 | En cas de problème, merci d'envoyer un message sur le discord officiel de BoC.`, 'https://cdn.discordapp.com/avatars/340308017297883138/a4e32aa07dbe905e5f99230680d33c4e.png?size=128');
       return sendResponse(message, { embed });
     }
